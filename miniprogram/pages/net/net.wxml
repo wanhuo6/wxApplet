@@ -1,2 +1,13 @@
 <!--pages/net/net.wxml-->
-<text>网络请求测试</text>
+<view class="container">
+  <text class="marginLeft">网络请求测试：</text>
+  <text class="marginLeft">结果:{{resultContent}}</text>
+  <swiper class="marginTop marginLeft marginRight" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{banner}}" wx:key="*this">
+      <swiper-item>
+        <image class="swiper-item" src="{{item.imagePath}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <button class="marginTop" type="primary" bindtap="getRequest" loading="{{isLoading}}" disabled="{{!buttonEnable}}">发起请求</button>
+</view>

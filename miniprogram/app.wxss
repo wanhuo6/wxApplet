@@ -28,3 +28,9 @@
   background-color: green;
   color: white;
 }
+.banner-item{
+  display: block;
+  height: 350rpx;
+  width: 100%;
+  background-color: aqua;
+}

@@ -5,7 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    isLoading: false,
+    buttonEnable: true,
+    resultContent:"",
+    banner:{},
+    indicatorDots: true,
+    vertical: false,
+    autoplay: true,
+    interval: 2000,
+    duration: 500
   },
 
   /**
@@ -62,5 +70,51 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+  /**
+ * 请求测试
+ */
+  getRequest() {
+    this.setData({
+      isLoading:true,
+      buttonEnable:false
+    })
+    console.log("getRequest")
+    wx.request({
+      url: "https://www.wanandroid.com/banner/json",
+      method: "GET",
+      success: (result) => {
+        console.log("request success result", result)
+        console.log("request success data", result.data.data)
+        wx.showToast({
+          title: '请求成功',
+          icon: 'success',
+          mask: true,
+          duration: 1000
+        })
+        this.setData({
+          resultContent:result.errMsg,
+          banner:result.data.data,
+          isLoading:false,
+          buttonEnable:true
+        })
+      },
+
+      fail: ({ errMsg }) => {
+        this.setData({
+          resultContent:errMsg,
+          banner:[],
+          isLoading:false,
+          buttonEnable:true
+        })
+        console.log("request fail", errMsg)
+        wx.showToast({
+          title: '请求成功',
+          icon: 'success',
+          mask: true,
+          duration: 1000
+        })
+      }
+    })
   }
 })

@@ -1,0 +1,8 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <button type="primary"  bindtap="goView">布局</button>
+  <button class="marginTop" type="primary" bindtap="goBanner">轮播图</button>
+  <button class="marginTop"  type="primary" bindtap="goList">列表</button>
+  <button class="marginTop"  type="primary" bindtap="goWidget">控件</button>
+  <button class="marginTop"  type="primary" bindtap="showDialog">弹窗</button>
+</view>

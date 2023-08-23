@@ -1,0 +1,141 @@
+// pages/mine/mine.ts
+// 获取应用实例
+const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    avatarUrl: defaultAvatarUrl,
+    nickName:"--",
+    userInfo: {},
+    hasUserInfo:false
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad() {
+    let name=wx.getStorageSync("nickName")
+    let url=wx.getStorageSync("avatarUrl")
+    if(url==null||url==""){
+        url=defaultAvatarUrl
+    }
+    console.log("name",name)
+    console.log("url",url);
+     this.setData({
+       nickName:name,
+       avatarUrl:url
+     })
+     
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload() {
+    
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh() {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom() {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage() {
+
+  },
+  /**
+   * 用户修改头像
+   */
+  onChooseAvatar(e:any) {
+    let url=e.detail.avatarUrl
+    console.log("获取头像",url)
+    wx.setStorageSync('avatarUrl',url)
+    this.setData({
+         avatarUrl:url
+       })
+    // const { avatarUrl } = e.detail 
+    // console.log("获取头像",avatarUrl)
+    // this.setData({
+    //   avatarUrl,
+    // })
+  },
+  /**
+   * 用户修改昵称
+   */
+  changeNickName(e:any){
+    let  name  = e.detail.value 
+    console.log("修改昵称",name)
+    wx.setStorageSync('nickName',name)
+    this.setData({
+      nickName: name 
+    })
+  }
+  // // 用户修改昵称
+  // changeNickName(e:any) {
+  //   const { nickName } = e.detail
+  //   console.log("昵称",e)
+  //   if (nickName.length === 0) return;
+  //   this.setData({
+  //     nickName,
+  //   })
+  // },
+  /**
+   * 获取个人信息
+   */
+  // getUserProfile() {
+  //   console.log("getUserProfile")
+  //   // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
+  //   wx.getUserProfile({
+  //     desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+  //     success: (res) => {
+  //       console.log("获取用户信息成功",res)
+  //       let user=res.userInfo
+  //       wx.setStorageSync('user',user)
+  //       this.setData({
+  //         userInfo: user,
+  //         hasUserInfo:true
+  //       })
+  //     },
+  //     fail:(res)=>{
+  //       console.log("获取用户信息失败",res)
+  //     }
+  //   })
+  // }
+  
+})

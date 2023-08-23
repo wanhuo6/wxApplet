@@ -1,0 +1,32 @@
+<!--pages/home/lean_view/view_banner/banner.wxml-->
+<view class="container">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{dormList}}" wx:key="*this">
+      <swiper-item>
+        <image class="swiper-item" src="{{item}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <View class="marginTop" style="flex-direction: row;">
+    <text class="marginLeft">指示点</text>
+    <switch class="marginLeft" checked="{{indicatorDots}}" bindchange="changeIndicatorDots" />
+  </View>
+  <View class="marginTop" style="flex-direction: row;">
+    <text class="marginLeft">自动播放</text>
+    <switch class="marginLeft" checked="{{a}}" bindchange="changeAutoplay" />
+  </View>
+  <View class="marginTop" style="flex-direction: column;">
+    <text class="marginLeft">幻灯片时长：{{duration}}ms</text>
+    <View class="marginLeft marginRight" style="flex-direction: column;">
+      <slider class="marginTop" bindchange="durationChange" value="{{duration}}" min="500" max="2000" />
+    </View>
+  </View>
+  <View class="marginTop" style="flex-direction: column;">
+    <text class="marginLeft">自动播放时长：{{interval}}ms</text>
+    <View class="marginLeft marginRight" style="flex-direction: column;">
+      <slider class="marginTop" bindchange="intervalChange" value="{{interval}}" min="2000" max="10000" />
+    </View>
+  </View>
+
+
+</view>

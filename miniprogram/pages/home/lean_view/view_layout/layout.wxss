@@ -1,0 +1,19 @@
+/* pages/home/lean_view/view_layout/layout.wxss */
+.layout_title{
+ font-size: 16px;
+ color: #000000;
+ margin-left: 20rpx;
+ margin-right: 20rpx;
+}
+.layout_flex_wrp{
+  margin-top: 20rpx;
+  display:flex;
+  align-items: center;
+}
+.layout_flex_text{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  color: #1AAD19;
+  font-size: 18px;
+}

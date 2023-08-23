@@ -1,0 +1,7 @@
+/* pages/home/lean_view/view_banner/banner.wxss */
+.swiper-item{
+  display: block;
+  height: 350rpx;
+  width: 100%;
+  background-color: aqua;
+}

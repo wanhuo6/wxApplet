@@ -1,0 +1,16 @@
+<!--pages/home/lean_view/view_widget/widget.wxml-->
+<view class="container">
+  <text class="marginLeft">控件</text>
+  <button type="primary" loading="true">进度按钮</button>
+  <button class="marginTop" type="primary" plain="true">按钮</button>
+  <button class="marginTop" disabled="true" type="primary" size="mini">按钮</button>
+
+  <radio-group class="center_parent marginTop">
+    <label class="radio">
+      <radio value="r1" checked="true" />选中
+    </label>
+    <label class="radio">
+      <radio value="r2" />未选中
+    </label>
+  </radio-group>
+</view>

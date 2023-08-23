@@ -1,0 +1,18 @@
+<!--pages/home/lean_view/view_list/list.wxml-->
+<view class="container">
+  <text class="marginLeft">列表测试</text>
+  <view class="navBox" wx:for="{{dataList}}" wx:key="*this">
+    <view class="margin100">
+      <text> 条目</text>
+      <text> 条目</text>
+      <text> 条目</text>
+      <text> 条目</text>
+      <text> 条目</text>
+      <text> 条目：{{item}}</text>
+    </view>
+  </view>
+  <view class="bomTxt">
+      <view hidden="{{!loading}}">正在加载...</view>
+      <view hidden="{{!loaded}}">已加载全部</view>
+    </view>
+</view>

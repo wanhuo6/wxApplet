@@ -1,0 +1,30 @@
+/**app.wxss**/
+.container {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+.center_parent{
+  margin: auto;
+}
+.marginTop{
+  margin-top: 20rpx;
+}
+.marginLeft{
+  margin-left: 20rpx;
+}
+.marginRight{
+  margin-right: 20rpx;
+}
+.marginBottom{
+  margin-bottom: 20rpx;
+}
+.margin{
+  margin: 20rpx;
+}
+.button{
+  background-color: green;
+  color: white;
+}

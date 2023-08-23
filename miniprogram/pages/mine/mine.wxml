@@ -1,0 +1,8 @@
+<view class="container">
+<button style="width: min-content; height: min-content;" class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+  <image class="avatar" src="{{avatarUrl}}"></image>
+</button> 
+<text class="marginLeft marginBottom">昵称：{{nickName}}</text>
+<input bindinput="changeNickName" type="nickname" name ="nickname" class="nick-name-input" placeholder="请输入昵称"/>
+<!-- bindblur="changeNickName"/> -->
+</view>

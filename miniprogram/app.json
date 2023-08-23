@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/mine/mine",
+    "pages/net/net",
+    "pages/logs/logs",
+    "pages/home/lean_view/view_layout/layout",
+    "pages/home/lean_view/view_banner/banner",
+    "pages/home/lean_view/view_list/list",
+    "pages/home/lean_view/view_widget/widget"
+  ],
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "视图",
+        "iconPath": "image/icon_component.png",
+        "selectedIconPath": "image/icon_component_HL.png"
+      },
+      {
+        "pagePath": "pages/net/net",
+        "text": "网络",
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "image/wechat.png",
+        "selectedIconPath": "image/wechatHL.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "个人中心",
+        "iconPath": "image/icon_cloud.png",
+        "selectedIconPath": "image/icon_cloud_HL.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

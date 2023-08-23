@@ -1,0 +1,16 @@
+/* pages/home/lean_view/view_list/list.wxss */
+.margin100 {
+  margin: 100rpx;
+}
+
+.navBox {
+  background: red;
+  border-radius: 20rpx;
+  margin: 20rpx;
+}
+.bomTxt {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  color: blue;
+}

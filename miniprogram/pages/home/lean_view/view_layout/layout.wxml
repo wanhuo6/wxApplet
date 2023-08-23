@@ -1,0 +1,15 @@
+<!--pages/home/lean_view/view_layout/layout.wxml-->
+<view class="container">
+  <text class="layout_title">横向布局</text>
+  <view class="layout_flex_wrp" style="flex-direction: row;">
+    <text class="layout_flex_text center_parent">条目1</text>
+    <text class="layout_flex_text center_parent">条目2</text>
+    <text class="layout_flex_text center_parent">条目3</text>
+  </view>
+  <text class="layout_title marginTop">纵向布局</text>
+  <view class="layout_flex_wrp" style="flex-direction: column;">
+    <text class="layout_flex_text center_parent marginTop">条目1</text>
+    <text class="layout_flex_text center_parent marginTop">条目2</text>
+    <text class="layout_flex_text center_parent marginTop">条目3</text>
+  </view>
+</view>

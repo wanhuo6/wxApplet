@@ -5,30 +5,42 @@
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-} 
-.center_parent{
+}
+
+.center_parent {
   margin: auto;
 }
-.marginTop{
+
+.fill_width {
+  width: 100%;
+}
+
+.marginTop {
   margin-top: 20rpx;
 }
-.marginLeft{
+
+.marginLeft {
   margin-left: 20rpx;
 }
-.marginRight{
+
+.marginRight {
   margin-right: 20rpx;
 }
-.marginBottom{
+
+.marginBottom {
   margin-bottom: 20rpx;
 }
-.margin{
+
+.margin {
   margin: 20rpx;
 }
-.button{
+
+.button {
   background-color: green;
   color: white;
 }
-.banner-item{
+
+.banner-item {
   display: block;
   height: 350rpx;
   width: 100%;

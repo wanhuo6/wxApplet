@@ -7,7 +7,9 @@
     "pages/home/lean_view/view_layout/layout",
     "pages/home/lean_view/view_banner/banner",
     "pages/home/lean_view/view_list/list",
-    "pages/home/lean_view/view_widget/widget"
+    "pages/home/lean_view/view_widget/widget",
+    "pages/home/lean_view/view_video/video",
+    "pages/home/lean_view/view_live/live"
   ],
   "tabBar": {
     "color": "#666666",

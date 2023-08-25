@@ -5,4 +5,6 @@
   <button class="marginTop"  type="primary" bindtap="goList">列表</button>
   <button class="marginTop"  type="primary" bindtap="goWidget">控件</button>
   <button class="marginTop"  type="primary" bindtap="showDialog">弹窗</button>
+  <button class="marginTop"  type="primary" bindtap="goVideo">视频</button>
+  <button class="marginTop"  type="primary" bindtap="goLive">直播</button>
 </view>

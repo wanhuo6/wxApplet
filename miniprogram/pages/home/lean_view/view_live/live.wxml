@@ -1,0 +1,4 @@
+<!--pages/home/lean_view/view_live/live.wxml-->
+<view class="container">
+<live-player class="center_parent marginTop" id="player" src="{{ videoSrc }}" mode="RTC" autoplay bindstatechange="handleLivePlayerStateChange" binderror="handleLivePlayerError"></live-player>
+</view>

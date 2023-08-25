@@ -1,0 +1,9 @@
+<!--pages/home/lean_view/view_video/video.wxml-->
+<view class="container">
+  <video class="fill_width" id="myVideo" src="{{videoUrl}}" binderror="videoErrorCallback" danmu-list="{{danmuList}}" enable-danmu danmu-btn show-casting-button show-screen-lock-button show-center-play-btn='{{false}}' show-play-btn="{{true}}" muted="{{true}}" show-mute-btn="{{true}}" controls picture-in-picture-mode="{{['push', 'pop']}}" bindenterpictureinpicture='bindVideoEnterPictureInPicture' bindleavepictureinpicture='bindVideoLeavePictureInPicture' enable-auto-rotation="{{enableAutoRotation}}"></video>
+
+  <view class="marginLeft">
+    <text>开启自动旋转</text>
+    <switch class="marginLeft" model:checked="{{ enableAutoRotation }}" bindchange="handleSwitchChange" />
+  </view>
+</view>

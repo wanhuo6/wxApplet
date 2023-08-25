@@ -108,5 +108,21 @@ Page({
         }
       }
     })
+  },
+  /**
+   * 跳转视频
+   */
+  goVideo(){
+    wx.navigateTo({
+      url: '/pages/home/lean_view/view_video/video'
+    })
+  },
+  /**
+   * 跳转直播
+   */
+  goLive(){
+    wx.navigateTo({
+      url: '/pages/home/lean_view/view_live/live'
+    })
   }
 })

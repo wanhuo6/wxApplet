@@ -7,8 +7,8 @@ Page({
   data: {
     isLoading: false,
     buttonEnable: true,
-    resultContent:"",
-    banner:{},
+    resultContent: "",
+    banner: {},
     indicatorDots: true,
     vertical: false,
     autoplay: true,
@@ -76,8 +76,8 @@ Page({
  */
   getRequest() {
     this.setData({
-      isLoading:true,
-      buttonEnable:false
+      isLoading: true,
+      buttonEnable: false
     })
     console.log("getRequest")
     wx.request({
@@ -93,24 +93,24 @@ Page({
           duration: 1000
         })
         this.setData({
-          resultContent:result.errMsg,
-          banner:result.data.data,
-          isLoading:false,
-          buttonEnable:true
+          resultContent: result.errMsg,
+          banner: result.data.data,
+          isLoading: false,
+          buttonEnable: true
         })
       },
 
       fail: ({ errMsg }) => {
         this.setData({
-          resultContent:errMsg,
-          banner:[],
-          isLoading:false,
-          buttonEnable:true
+          resultContent: errMsg,
+          banner: [],
+          isLoading: false,
+          buttonEnable: true
         })
         console.log("request fail", errMsg)
         wx.showToast({
-          title: '请求成功',
-          icon: 'success',
+          title: '请求失败',
+          icon: 'error',
           mask: true,
           duration: 1000
         })
